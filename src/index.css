@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #061b06;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    display: flex;
+}
+
+/* nav  */
+nav {
+    height: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav__container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 100%;
+}
+
+.nav__links {
+    display: flex;
+    cursor: pointer;
+}
+
+.nav__link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+/* main */
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.container__search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.search__input {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 40%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.container-element {
+    width: 1040px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container__rows  {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 40px;
+    gap: 20px;
+    max-width: 1040px;
+}
+
+.container__items {
+    height: 300px;
+    width: 225px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-element > .loading{
+    justify-content: center;
+}
+
+.row__img {
+    height: 300px;
+    width: 100%;
+    display: block;
+    position: relative;
+
+}
+
+.Info-display {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.display__items{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
+    gap: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #606266;
+}
+
+.Info-display:hover {
+    opacity: 0.9; 
+    transition: 0.3s ease-in-out;
+    z-index: 150;
+    
+}
+
+h5 {
+    border: none;
+}
+
+.Icon{
+    width: 36px;
+    height: 36px;
+}
+
+.display__items--content > h5 {
+    display: flex;
+    margin-bottom: 5px; 
+    color: black;
+}
+
+.display__items--content{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Loading state*/
+
+.loading {
+    margin: 50px auto;
+    border: solid 5px #fefefe;
+    border-top: solid 5px #3498db;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: loading 1s infinite linear
+    }
+
+    @keyframes loading {
+    0% {
+    transform: rotate (0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+    /* CharacterBio */
+
+.container--context{
+    width: 1040px;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #606266;
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.container--name{
+    height: 50px;
+    width: 400px;
+}
+.container--row{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.row--chara__img{
+    height: 360px;
+    width: 250px;    
+}
+
+.row--bio{
+    height: 100%;
+    width: 700px;
+    
+}
+
+.container--info{
+    width: 100%;
+    height: 500px;
+    
+}
+
+.row--bio > h3 {
+    margin-bottom: 5px;
+}
+
+.row--bio > p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+
+.footer{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer--content{
+    height: 80px;
+    width: 600px;
+    text-align: center;
+}
+
+.footer--content > p{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav__links{
+      display: none;
+    }
+    .container-element{
+        width: 300px;
+    }
+    .container__search{
+        width: 600px;
+    }
+    .footer--content{
+        width: 500px;
+    }
+  }
