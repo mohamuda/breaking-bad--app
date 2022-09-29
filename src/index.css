@@ -283,4 +283,30 @@ h5 {
   .footer--content {
     width: 500px;
   }
+  .container--context {
+    width: 400px;
+    height: 100%;
+  }
+  .container--row {
+    display: flex;
+    flex-direction: column;
+  }
+  .container--row > img {
+    margin-bottom: 20px;
+  }
+  .row--bio {
+    width: 100%;
+  }
+  .footer--content {
+    width: 80%;
+  }
+  .container--name {
+    height: 100%;
+  }
+  .App {
+    overflow-x: hidden;
+  }
+  .container--name > h1 {
+    font-size: 22px;
+  }
 }
